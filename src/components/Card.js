@@ -27,7 +27,7 @@ const Card = ({ title, description, imageSrc, url, git }) => {
         </Text>
         <HStack >{/*horizontal means new line here */}
           <a href={git}>
-            <p>See more</p>
+            <p>GitHub Link See more</p>
           </a>
           <FontAwesomeIcon icon={faArrowRight} size="1x" />
         </HStack>
