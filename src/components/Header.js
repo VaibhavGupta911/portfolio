@@ -33,15 +33,10 @@ const Header = () => {
       });
     }
   };
-
-
-
   return (
     <Box
-
       justifyContent="center"
       alignItems="center"
-
       // position='fixed'
       top={0}
       left={0}
@@ -54,7 +49,6 @@ const Header = () => {
       backgroundColor="#128C7E"
     >
       <Box color="white" maxWidth="1280px"
-
         margin="0 auto">
         <HStack
           px={16}
