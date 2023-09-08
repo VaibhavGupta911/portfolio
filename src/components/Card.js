@@ -13,9 +13,9 @@ const Card = ({ title, description, imageSrc, url, git }) => {
     // <a href="https://vaibhavgupta911.github.io/portfolio-react-proj/"></a>
     <VStack
       color='black' background='white'
-      borderRadius='xl' cursor='pointer'
+      borderRadius='xl'
     >
-      <a href={url}>
+      <a href={url} cursor='pointer'>
         <Image src={imageSrc} borderRadius='xl' />
       </a>
       <VStack spacing={4} p={4} alignItems='flex-start'>
@@ -28,12 +28,12 @@ const Card = ({ title, description, imageSrc, url, git }) => {
           {description}
         </Text>
         <HStack >{/*horizontal means new line here */}
-          <a href={git}>
-            <Text fontSize='lg'> 
-             <FontAwesomeIcon
-              icon={faGithub}
-              size='1x' 
-            /> See more <FontAwesomeIcon icon={faArrowRight} size="1x" /></Text>
+          <a href={git} cursor='pointer'>
+            <Text fontSize='lg'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                size='1x'
+              /> See more <FontAwesomeIcon icon={faArrowRight} size="1x" /></Text>
           </a>
         </HStack>
       </VStack>
