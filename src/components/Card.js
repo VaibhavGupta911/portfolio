@@ -2,7 +2,9 @@ import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-
+import {
+  faGithub
+} from "@fortawesome/free-brands-svg-icons";
 const Card = ({ title, description, imageSrc, url, git }) => {
   // Implement the UI for the Card component according to the instructions.
   // You should be able to implement the component with the elements imported above.
@@ -27,14 +29,15 @@ const Card = ({ title, description, imageSrc, url, git }) => {
         </Text>
         <HStack >{/*horizontal means new line here */}
           <a href={git}>
-            <p>GitHub Link See more</p>
+            <Text fontSize='lg'> 
+             <FontAwesomeIcon
+              icon={faGithub}
+              size='1x' 
+            /> See more <FontAwesomeIcon icon={faArrowRight} size="1x" /></Text>
           </a>
-          <FontAwesomeIcon icon={faArrowRight} size="1x" />
         </HStack>
       </VStack>
-
     </VStack>
-
   );
 };
 
