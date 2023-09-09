@@ -1,9 +1,10 @@
 import Photo from '../images/Photo5.jpg'//always import image in top
-import resume from '../images/Resume.pdf'
+import resume from '../images/Resume1.pdf'
 import React from "react";
-import { Avatar, Box, Button, Heading, List, ListIcon,ListItem,VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Heading, Image, List, ListIcon, ListItem, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact } from "react-icons/fa6";
+import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta } from "react-icons/fa6";
+import course from '../images/Coursera.jpg'
 import { SiChakraui } from "react-icons/si";
 
 const greeting = "Hello, I am Vaibhav Gupta!";
@@ -17,7 +18,7 @@ const LandingSection = () => (
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-   backgroundColor="#2A4365"
+    backgroundColor="#2A4365"
   >
     <VStack spacing={6} py='6'>
       <Avatar src={Photo}
@@ -30,9 +31,9 @@ const LandingSection = () => (
       <VStack spacing={6} >
         <Heading as='h1' size='2xl' >{bio1}</Heading>
         <Heading as='h1' size='2xl'>{bio2}</Heading>
-        <a href={resume} download="Resume" >
+        <a href={resume} download="Vaibhav Gupta Resume" >
           <Button shadow='dark-lg'
-         // variant='solid'
+            // variant='solid'
             colorScheme='whatsapp' size='md'>
             Download Resume
           </Button>
@@ -44,9 +45,10 @@ const LandingSection = () => (
         backgroundColor='#075E54'
         borderRadius='2xl'
         shadow='dark-lg'
+        id="skills-section"
       >
         <VStack p='2' m='2'>
-          <Heading as="h4" size='lg' id="projects-section">
+          <Heading as="h4" size='lg' >
             Skills
           </Heading>
           <List spacing='2' fontSize='3xl'  >
@@ -76,6 +78,34 @@ const LandingSection = () => (
 
         </VStack>
 
+      </Box>
+      <Box
+        m='4'
+        //backgroundColor="#14532d"
+        backgroundColor='#075E54'
+        borderRadius='2xl'
+        shadow='dark-lg'
+        className='Certification-section'
+        id='Certification-section'
+      >
+        <VStack p='2' m='2'>
+          <Heading as="h4" size='lg' >
+            Certification
+          </Heading>
+          <List spacing='2' fontSize='3xl'  >
+            <ListItem>
+              <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
+                <ListIcon ><FaMeta size="2x" /></ListIcon>
+                Meta Front-End Developer Certification
+              </a>
+            </ListItem>
+          </List>
+          <Box boxSize='sm' alignContent='center' alignItems='center'>
+            <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
+              <Image src={course} alt='meta front end deveplomnet course ' />
+            </a>
+          </Box>
+        </VStack>
       </Box>
     </VStack>
   </FullScreenSection>
