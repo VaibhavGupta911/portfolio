@@ -52,15 +52,18 @@ const Header = () => {
       <Box color="white" maxWidth="1280px"
         margin="0 auto">
         <HStack
-          px={16}
-          py={4}
+          px={10}
+          py={6}
           justifyContent="space-between"
           alignItems="center"
+          display='flex' flexDirection='row' flexWrap='wrap'
         //  alignItems='stretch'
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
-            <HStack spacing={8}>
+            <HStack spacing={8}
+            padding={3}
+            >
               {
                 socials.map((e) =>
                   <a href={e.url} key={e.url} className="link-hover">
@@ -81,6 +84,7 @@ const Header = () => {
                 href="#projects"
                 onClick={handleClick("projects")}
                 className="link-hover"
+                display='flex' flexDirection='row' flexWrap='wrap'
               >
                 Projects
               </a>

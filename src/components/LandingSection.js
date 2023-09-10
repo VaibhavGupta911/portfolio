@@ -29,8 +29,8 @@ const LandingSection = () => (
       />
       <Heading as='h4' size='md'>{greeting}</Heading>
       <VStack spacing={6} >
-        <Heading as='h1' size='2xl' >{bio1}</Heading>
-        <Heading as='h1' size='2xl'>{bio2}</Heading>
+        <Heading as='h3' size='xl' >{bio1}</Heading>
+        <Heading as='h3' size='xl'>{bio2}</Heading>
         <a href={resume} download="Vaibhav Gupta Resume" >
           <Button shadow='dark-lg'
             // variant='solid'
@@ -47,11 +47,11 @@ const LandingSection = () => (
         shadow='dark-lg'
         id="skills-section"
       >
-        <VStack p='2' m='2'>
+        <VStack p='1' m='1'>
           <Heading as="h4" size='lg' >
             Skills
           </Heading>
-          <List spacing='2' fontSize='3xl'  >
+          <List spacing='2' fontSize='2xl'  >
             <ListItem>
               <ListIcon ><FaReact size="2x" />
               </ListIcon>
@@ -91,7 +91,7 @@ const LandingSection = () => (
           <Heading as="h4" size='lg' >
             Certification
           </Heading>
-          <List spacing='2' fontSize='3xl'  >
+          <List spacing='2' fontSize='2xl'  >
             <ListItem>
               <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
                 <ListIcon ><FaMeta size="2x" /></ListIcon>
