@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Spacer } from "@chakra-ui/react";
 
+
 const socials = [
   {
     icon: faEnvelope,
@@ -62,7 +63,7 @@ const Header = () => {
             <HStack spacing={8}>
               {
                 socials.map((e) =>
-                  <a href={e.url} key={e.url}>
+                  <a href={e.url} key={e.url} className="link-hover">
                     <FontAwesomeIcon
                       icon={e.icon}
                       size="2x"
@@ -74,23 +75,26 @@ const Header = () => {
           </nav>
           <Spacer />
           <nav>
-            <HStack spacing={8}>
+            <HStack spacing={8} >
               {/* Add links to Project*/}
               <a
                 href="#projects"
                 onClick={handleClick("projects")}
+                className="link-hover"
               >
                 Projects
               </a>
               <a
                 href="#certifications"
                 onClick={handleClick("Certification")}
+                className="link-hover"
               >
                 Certification
               </a>
               <a
                 href="#skills"
                 onClick={handleClick("skills")}
+                className="link-hover"
               >
                 Skills
               </a>

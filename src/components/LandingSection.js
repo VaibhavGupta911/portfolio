@@ -73,7 +73,6 @@ const LandingSection = () => (
             <ListItem>
               <ListIcon ><SiChakraui size="2x" /></ListIcon>
               Chakra-UI</ListItem>
-
           </List>
 
         </VStack>
@@ -102,7 +101,7 @@ const LandingSection = () => (
           </List>
           <Box boxSize='sm' alignContent='center' alignItems='center'>
             <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
-              <Image src={course} alt='meta front end deveplomnet course ' />
+              <Image src={course} alt='meta front end deveplomnet course ' borderRadius='2xl' />
             </a>
           </Box>
         </VStack>
@@ -110,5 +109,4 @@ const LandingSection = () => (
     </VStack>
   </FullScreenSection>
 );
-
 export default LandingSection;
