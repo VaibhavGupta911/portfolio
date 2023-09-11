@@ -79,7 +79,9 @@ const LandingSection = () => (
 
       </Box>
       <Box
-        m='4'
+      marginLeft='3'
+      marginRight='3'
+      
         //backgroundColor="#14532d"
         backgroundColor='#075E54'
         borderRadius='2xl'
@@ -87,11 +89,11 @@ const LandingSection = () => (
         className='Certification-section'
         id='Certification-section'
       >
-        <VStack p='2' m='2'>
+        <VStack p='2'm='2' >
           <Heading as="h4" size='lg' >
             Certification
           </Heading>
-          <List spacing='2' fontSize='2xl'  >
+          <List spacing='2' fontSize='2xl'   >
             <ListItem>
               <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
                 <ListIcon ><FaMeta size="2x" /></ListIcon>

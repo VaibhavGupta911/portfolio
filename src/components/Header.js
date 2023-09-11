@@ -5,7 +5,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Spacer } from "@chakra-ui/react";
+import { Box,HStack, Spacer } from "@chakra-ui/react";
 
 
 const socials = [
@@ -56,13 +56,19 @@ const Header = () => {
           py={6}
           justifyContent="space-between"
           alignItems="center"
-          display='flex' flexDirection='row' flexWrap='wrap'
+          display='flex'
+          flexDirection='row'
+          flexWrap='wrap'
+
         //  alignItems='stretch'
         >
           <nav>
             {/* Add social media links based on the `socials` data */}
             <HStack spacing={8}
-            padding={3}
+              padding={3}
+              display='flex'
+              flexDirection='row'
+              justify='space-between'
             >
               {
                 socials.map((e) =>
@@ -78,7 +84,7 @@ const Header = () => {
           </nav>
           <Spacer />
           <nav>
-            <HStack spacing={8} >
+            <HStack spacing={8} padding={3} >
               {/* Add links to Project*/}
               <a
                 href="#projects"

@@ -14,10 +14,12 @@ const Card = ({ title, description, imageSrc, url, git }) => {
     <VStack
       color='black' background='white'
       borderRadius='xl'
-      
+
     >
-      <a href={url} cursor='pointer'>
-        <Image src={imageSrc} borderRadius='xl' />
+      <a href={url} cursor='pointer' >
+        <Image src={imageSrc} 
+        borderTopRadius='xl'
+        />
       </a>
       <VStack spacing={4} p={4} alignItems='flex-start'>
         <HStack> {/*horizontal means new line here */}
