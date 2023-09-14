@@ -10,8 +10,8 @@ const projects = [
       "🍋 Little Lemon Restaurant: React.js, Formik. Explore a responsive, interactive dining experience. Tech: React.js, CSS, HTML, JS",
     getImageSrc: () => require("../images/little lemon.jpg"),
     url: 'https://vaibhavgupta911.github.io/little-lemon-resturant/',
-    gitlink:'https://github.com/VaibhavGupta911/little-lemon-resturant',
- 
+    gitlink: 'https://github.com/VaibhavGupta911/little-lemon-resturant',
+
   },
   {
     title: "Little Lemon Restaurant Figma Meta Frontend Develpoment Capstone Project ",
@@ -19,7 +19,7 @@ const projects = [
       "Step into the creative journey of Little Lemon Restaurant! Delve into meticulously crafted wireframes, lifelike prototypes, and comprehensive user requirements, all thoughtfully developed to curate an unparalleled dining experience. Immerse yourself in the visual transformation from conceptual sketches to engaging interactive interfaces.",
     getImageSrc: () => require("../images/figma1.jpg"),
     url: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
-    gitlink:'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
+    gitlink: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
   },
   {
     title: "Portfolio for Meta Frontend Develpoment Course Assignment",
@@ -27,7 +27,7 @@ const projects = [
       "Nav Bar with Social media links and quick scroll button , picture of student Featured Project , Contact Form & footer made using Chakara UI Formik forms yup React hooks etc",
     getImageSrc: () => require("../images/photo1.png"),
     url: 'https://vaibhavgupta911.github.io/portfolio-react-proj/',
-    gitlink:'https://github.com/VaibhavGupta911/portfolio-react-proj',
+    gitlink: 'https://github.com/VaibhavGupta911/portfolio-react-proj',
   },
   {
     title: "Little Lemon UI",
@@ -35,7 +35,7 @@ const projects = [
       "As a Part of Meta Frontend development Course Assignment I made Little Lemon UI UX Using Figma which includes(User persona, Wireframe,Basic Running Phototype, Journey Map)",
     getImageSrc: () => require("../images/photo2.jpg"),
     url: 'https://www.figma.com/file/LYe8AM7c9SexkBOnIWXxbC/Little-Lemon-Project?type=design&node-id=0%3A1&mode=design&t=13QPxkRHikdINFqQ-1',
-    gitlink:'https://www.figma.com/file/LYe8AM7c9SexkBOnIWXxbC/Little-Lemon-Project?type=design&node-id=0%3A1&mode=design&t=13QPxkRHikdINFqQ-1',
+    gitlink: 'https://www.figma.com/file/LYe8AM7c9SexkBOnIWXxbC/Little-Lemon-Project?type=design&node-id=0%3A1&mode=design&t=13QPxkRHikdINFqQ-1',
   },
   {
     title: "E Commerce Website",
@@ -43,7 +43,7 @@ const projects = [
       "E Commerce Website made using HTML CSS JavaScript as a part of Internship & Training with InternsElite · Internship",
     getImageSrc: () => require("../images/photo3.jpg"),
     url: 'https://vaibhavgupta911.github.io/e-com/',
-    gitlink:'https://github.com/VaibhavGupta911/e-com',
+    gitlink: 'https://github.com/VaibhavGupta911/e-com',
   },
   {
     title: "ToDo List",
@@ -51,7 +51,23 @@ const projects = [
       "Todo List made using React Chakara UI CSS HTML JavaScript project includes List Button and Dark Mode Button",
     getImageSrc: () => require("../images/photo4.jpg"),
     url: 'https://vaibhavgupta911.github.io/todolist/',
-    gitlink:'https://github.com/VaibhavGupta911/todolist',
+    gitlink: 'https://github.com/VaibhavGupta911/todolist',
+  },
+  {
+    title: "Results Summary Component",
+    description:
+      "A responsive component built with React, HTML, CSS, and JavaScript for showcasing skills like verbal memory, reaction time, and visual abilities.it adapts to all screen sizes.",
+    getImageSrc: () => require("../images/photo7.JPG"),
+    url: 'https://vaibhavgupta911.github.io/results_summary_component/',
+    gitlink: 'https://github.com/VaibhavGupta911/results_summary_component',
+  },
+  {
+    title: "Bookshelf Explorer",
+    description:
+      "Explore and manage your book collection with ease. Search and add books to your personal shelf. Leveraging Book API React's features and Chakra UI.",
+    getImageSrc: () => require("../images/photo8.JPG"),
+    url: 'https://vaibhavgupta911.github.io/bookshell/',
+    gitlink: 'https://github.com/VaibhavGupta911/bookshell',
   },
 ];
 
@@ -69,10 +85,10 @@ const ProjectsSection = () => {
         Featured Projects
       </Heading>
       <Box
-       display="grid"
-       gridTemplateColumns="repeat(2,minmax(0,1fr))"
-       gridGap={2}
-      
+        display="grid"
+        gridTemplateColumns="repeat(2,minmax(0,1fr))"
+        gridGap={2}
+
       >
         {projects.map((project) => (
           <Card
