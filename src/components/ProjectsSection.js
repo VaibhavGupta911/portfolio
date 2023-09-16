@@ -69,6 +69,14 @@ const projects = [
     url: 'https://vaibhavgupta911.github.io/bookshell/',
     gitlink: 'https://github.com/VaibhavGupta911/bookshell',
   },
+  {
+    title: "Interactive Rating Component",
+    description:
+      "A responsive React component with useContext and useState for state management, designed for interactive user ratings and feedback. It offers customization options and adapts seamlessly to different screen sizes.",
+    getImageSrc: () => require("../images/photo9.jpg"),
+    url: 'https://vaibhavgupta911.github.io/interactive_rating/',
+    gitlink: 'https://github.com/VaibhavGupta911/interactive_rating',
+  },
 ];
 
 const ProjectsSection = () => {

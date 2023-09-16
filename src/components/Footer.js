@@ -16,7 +16,7 @@ const Footer = () => {
           maxWidth="1024px"
           height={16}
         >
-          <Text>Vaibhav Gupta • © 2023 • Made by React Chakara UI</Text>
+          <Text>Vaibhav Gupta • 2023 • Made using React Chakara UI</Text>
         </Flex>
       </footer>
     </Box>
