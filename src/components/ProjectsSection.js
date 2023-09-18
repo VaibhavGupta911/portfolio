@@ -54,15 +54,7 @@ const projects = [
     gitlink: 'https://github.com/VaibhavGupta911/todolist',
   },
   {
-    title: "Results Summary Component",
-    description:
-      "A responsive component built with React, HTML, CSS, and JavaScript for showcasing skills like verbal memory, reaction time, and visual abilities.it adapts to all screen sizes.",
-    getImageSrc: () => require("../images/photo7.JPG"),
-    url: 'https://vaibhavgupta911.github.io/results_summary_component/',
-    gitlink: 'https://github.com/VaibhavGupta911/results_summary_component',
-  },
-  {
-    title: "Bookshelf Explorer",
+    title: "Bookshelf Explorer (Assignment of Marquee Equity",
     description:
       "Explore and manage your book collection with ease. Search and add books to your personal shelf. Leveraging Book API React's features and Chakra UI.",
     getImageSrc: () => require("../images/photo8.JPG"),
@@ -70,12 +62,29 @@ const projects = [
     gitlink: 'https://github.com/VaibhavGupta911/bookshell',
   },
   {
+    title: "Results Summary Component",
+    description:
+      "A responsive component built with React, HTML, CSS, and JavaScript for showcasing skills like verbal memory, reaction time, and visual abilities.it adapts to all screen sizes.",
+    getImageSrc: () => require("../images/photo7.JPG"),
+    url: 'https://vaibhavgupta911.github.io/results_summary_component/',
+    gitlink: 'https://github.com/VaibhavGupta911/results_summary_component',
+  },
+  
+  {
     title: "Interactive Rating Component",
     description:
       "A responsive React component with useContext and useState for state management, designed for interactive user ratings and feedback. It offers customization options and adapts seamlessly to different screen sizes.",
     getImageSrc: () => require("../images/photo9.jpg"),
     url: 'https://vaibhavgupta911.github.io/interactive_rating/',
     gitlink: 'https://github.com/VaibhavGupta911/interactive_rating',
+  },
+  {
+    title: "FAQ Accordion Card",
+    description:
+      "This project is responsive and interactive  FAQ accordion card built with React, HTML, CSS, and JavaScript, utilizing React's useState. The FAQ card display a list of questions and answers, allowing users to expand and collapse answers as needed.",
+    getImageSrc: () => require("../images/photo10.jpg"),
+    url: 'https://vaibhavgupta911.github.io/faqapp/',
+    gitlink: 'https://github.com/VaibhavGupta911/faqapp',
   },
 ];
 
