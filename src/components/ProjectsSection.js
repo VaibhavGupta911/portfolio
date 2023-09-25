@@ -54,7 +54,7 @@ const projects = [
     gitlink: 'https://github.com/VaibhavGupta911/todolist',
   },
   {
-    title: "Bookshelf Explorer (Assignment of Marquee Equity",
+    title: "Bookshelf Explorer (Assignment of Marquee Equity)",
     description:
       "Explore and manage your book collection with ease. Search and add books to your personal shelf. Leveraging Book API React's features and Chakra UI.",
     getImageSrc: () => require("../images/photo8.JPG"),

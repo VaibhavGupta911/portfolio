@@ -5,7 +5,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box,HStack, Spacer } from "@chakra-ui/react";
+import { Box, HStack, Spacer } from "@chakra-ui/react";
 
 
 const socials = [
@@ -36,6 +36,7 @@ const Header = () => {
   };
   return (
     <Box
+      className="box1"
       justifyContent="center"
       alignItems="center"
       // position='fixed'
@@ -48,9 +49,13 @@ const Header = () => {
       transitionTimingFunction="ease-in-out"
       //  backgroundColor="#18181b"
       backgroundColor="#128C7E"
+      minW='full'
     >
-      <Box color="white" maxWidth="1280px"
-        margin="0 auto">
+      <Box
+        className="box2"
+        color="white" width
+        backgroundColor="#128C7E"
+        margin="0 0">
         <HStack
           px={10}
           py={6}
