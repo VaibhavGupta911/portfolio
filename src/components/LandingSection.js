@@ -48,10 +48,10 @@ const LandingSection = () => (
         id="skills-section"
       >
         <VStack p='1' m='1'>
-          <Heading as="h4" size='lg' >
+          <Heading  as="h3" size='md' >
             Skills
           </Heading>
-          <List spacing='2' fontSize='2xl'  >
+          <List spacing='2' fontSize='md'  >
             <ListItem>
               <ListIcon ><FaReact size="2x" />
               </ListIcon>
@@ -79,9 +79,8 @@ const LandingSection = () => (
 
       </Box>
       <Box
-      marginLeft='3'
-      marginRight='3'
-      
+     marginLeft='1'
+     margin='1'
         //backgroundColor="#14532d"
         backgroundColor='#075E54'
         borderRadius='2xl'
@@ -90,10 +89,10 @@ const LandingSection = () => (
         id='Certification-section'
       >
         <VStack p='2'm='2' >
-          <Heading as="h4" size='lg' >
+          <Heading as="h3" size='md' >
             Certification
           </Heading>
-          <List spacing='2' fontSize='2xl'   >
+          <List spacing='2' fontSize='md'   >
             <ListItem>
               <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
                 <ListIcon ><FaMeta size="2x" /></ListIcon>
@@ -101,11 +100,11 @@ const LandingSection = () => (
               </a>
             </ListItem>
           </List>
-          <Box boxSize='sm' alignContent='center' alignItems='center'>
+       {/*<Box boxSize='sm' alignContent='center' alignItems='center'>   </Box> */}   
             <a href='https://www.coursera.org/account/accomplishments/specialization/certificate/P6YEQ6K7HRNX' >
-              <Image src={course} alt='meta front end deveplomnet course ' borderRadius='2xl' />
+              <Image src={course} alt='meta front end deveplomnet course ' borderRadius='2xl' height='200px' />
             </a>
-          </Box>
+        
         </VStack>
       </Box>
     </VStack>
