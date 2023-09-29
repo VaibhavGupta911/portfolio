@@ -79,7 +79,7 @@ const LandingSection = () => (
 
       </Box>
       <Box
-     marginLeft='1'
+    // marginLeft='1'
      margin='1'
         //backgroundColor="#14532d"
         backgroundColor='#075E54'
