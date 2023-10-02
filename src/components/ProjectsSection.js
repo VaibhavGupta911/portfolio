@@ -5,9 +5,9 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "🍋 Little Lemon Restaurant Website Meta Frontend Develpoment Capstone Project",
+    title: "🍋Little Lemon Restaurant Website Meta Frontend Develpoment Capstone Project",
     description:
-      "🍋 Little Lemon Restaurant: React.js, Formik. Explore a responsive, interactive dining experience. Tech: React.js, CSS, HTML, JS",
+      "🍋Little Lemon Restaurant: React.js,Formik.Explore a responsive,interactive dining experience. Tech: React.js, CSS, HTML, JS",
     getImageSrc: () => require("../images/little lemon.jpg"),
     url: 'https://vaibhavgupta911.github.io/little-lemon-resturant/',
     gitlink: 'https://github.com/VaibhavGupta911/little-lemon-resturant',
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Little Lemon Restaurant Figma Meta Frontend Develpoment Capstone Project ",
     description:
-      "Step into the creative journey of Little Lemon Restaurant! Delve into meticulously crafted wireframes, lifelike prototypes, and comprehensive user requirements, all thoughtfully developed to curate an unparalleled dining experience. Immerse yourself in the visual transformation from conceptual sketches to engaging interactive interfaces.",
+      "Step into creative journey of Little Lemon Restaurant! Delve into meticulously crafted wireframes, lifelike prototypes, and comprehensive user requirements Immerse yourself in visual transformation from conceptual sketches to engaging interactive interfaces.",
     getImageSrc: () => require("../images/figma1.jpg"),
     url: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
     gitlink: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
@@ -40,7 +40,7 @@ const projects = [
   {
     title: "E Commerce Website",
     description:
-      "E Commerce Website made using HTML CSS JavaScript as a part of Internship & Training with InternsElite · Internship",
+      "E Commerce Website made using HTML CSS JavaScript as a part of Internship Training with InternsElite · Internship",
     getImageSrc: () => require("../images/photo3.jpg"),
     url: 'https://vaibhavgupta911.github.io/e-com/',
     gitlink: 'https://github.com/VaibhavGupta911/e-com',
@@ -56,7 +56,7 @@ const projects = [
   {
     title: "Bookshelf Explorer (Assignment of Marquee Equity)",
     description:
-      "Explore and manage your book collection with ease. Search and add books to your personal shelf. Leveraging Book API React's features and Chakra UI.",
+      "Explore and manage your book collection with ease. Search and add books to your personal shelf.Leveraging Book API React's features and Chakra UI.",
     getImageSrc: () => require("../images/photo8.JPG"),
     url: 'https://vaibhavgupta911.github.io/bookshell/',
     gitlink: 'https://github.com/VaibhavGupta911/bookshell',
@@ -64,7 +64,7 @@ const projects = [
   {
     title: "Results Summary Component",
     description:
-      "A responsive component built with React, HTML, CSS, and JavaScript for showcasing skills like verbal memory, reaction time, and visual abilities.it adapts to all screen sizes.",
+      "A responsive component built with React, HTML, CSS, and JavaScript for showcasing skills like verbal memory, reaction time, and visual abilities. it adapts to all screen sizes",
     getImageSrc: () => require("../images/photo7.JPG"),
     url: 'https://vaibhavgupta911.github.io/results_summary_component/',
     gitlink: 'https://github.com/VaibhavGupta911/results_summary_component',

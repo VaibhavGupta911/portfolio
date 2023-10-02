@@ -12,22 +12,22 @@ const Card = ({ title, description, imageSrc, url, git }) => {
   return (
     // <a href="https://vaibhavgupta911.github.io/portfolio-react-proj/"></a>
     <VStack
-      color='black' background='white'
+      color='black'/* background='white'*/
+      background='#f8f8f8'
       borderRadius='xl'
-
     >
       <a href={url} cursor='pointer' >
         <Image src={imageSrc} 
         borderTopRadius='xl'
         />
       </a>
-      <VStack spacing={4} p={4} alignItems='flex-start'>
+      <VStack spacing={4} p={3} alignItems='flex-start'>
         <HStack> {/*horizontal means new line here */}
-          <Heading as='h3' size='md' fontWeight='semibold' textAlign='left' >
+          <Heading as='h3' size='sm' fontWeight='semibold' textAlign='left' >
             {title}
           </Heading>
         </HStack>
-        <Text color='#64748b' fontSize='lg' textAlign='justify'>
+        <Text color='#64748b' fontSize='small' textAlign='left' /*textAlign='justify'*/>
           {description}
         </Text>
         <HStack >{/*horizontal means new line here */}
