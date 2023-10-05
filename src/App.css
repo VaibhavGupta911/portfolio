@@ -3,3 +3,16 @@ text-decoration: underline;
 text-decoration-color: rgb(71, 70, 70);
 color: rgb(30, 29, 29);
 }
+
+
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 9px;
+    background: #128C7E;
+    transform-origin: 0%;
+  }
+  
