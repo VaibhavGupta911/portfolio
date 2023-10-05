@@ -7,7 +7,7 @@ import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta } from "react-icons/f
 import course from '../images/Coursera.jpg'
 import { SiChakraui } from "react-icons/si";
 import { motion } from "framer-motion";
-const greeting = "Hello, I am Vaibhav Gupta!";
+const greeting = "Hi, I am Vaibhav Gupta!";
 const bio1 = "A frontend developer";
 const bio2 = "specialised in React";
 
@@ -32,23 +32,26 @@ const LandingSection = () => (
         <Heading as='h3' size='xl' >{bio1}</Heading>
         <Heading as='h3' size='xl'>{bio2}</Heading>
         <a href={resume} download="Vaibhav Gupta Resume" >
-        <motion.div
+        {/* <motion.div
       
       whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
-   >  <Button shadow='dark-lg'
+   >  */}
+    <Button shadow='dark-lg'
             // variant='solid'
             colorScheme='whatsapp' size='md'>
             Download Resume
-          </Button></motion.div>
+          </Button>
+          
+          {/* </motion.div> */}
         </a>
       </VStack>
-      <motion.div
+      {/* <motion.div
       className="box"
       
       whileHover={{ scale: [null, 1.2, 1.1] }}
       transition={{ duration: 0.5 }}
-    >
+    > */}
       <Box
         m='4' p='4'
         //backgroundColor="#14532d"
@@ -88,13 +91,13 @@ const LandingSection = () => (
         </VStack>
 
       </Box>
-      </motion.div>
-      <motion.div
+      {/* </motion.div> */}
+      {/* <motion.div
       className="box"
       
       whileHover={{ scale: [null, 1.5, 1.3] }}
       transition={{ duration: 0.5 }}
-    >  
+    >   */}
       <Box
     // marginLeft='1'
      margin='1'
@@ -124,7 +127,7 @@ const LandingSection = () => (
         
         </VStack>
       </Box>
-      </motion.div>
+      {/* </motion.div> */}
     </VStack>
   </FullScreenSection>
 );
