@@ -6,7 +6,7 @@ import FullScreenSection from "./FullScreenSection";
 import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta } from "react-icons/fa6";
 import course from '../images/Coursera.jpg'
 import { SiChakraui } from "react-icons/si";
-
+import { motion } from "framer-motion";
 const greeting = "Hello, I am Vaibhav Gupta!";
 const bio1 = "A frontend developer";
 const bio2 = "specialised in React";
@@ -39,6 +39,12 @@ const LandingSection = () => (
           </Button>
         </a>
       </VStack>
+      <motion.div
+      className="box"
+      
+      whileHover={{ scale: [null, 1.2, 1.1] }}
+      transition={{ duration: 0.3 }}
+    >
       <Box
         m='4' p='4'
         //backgroundColor="#14532d"
@@ -78,6 +84,13 @@ const LandingSection = () => (
         </VStack>
 
       </Box>
+      </motion.div>
+      <motion.div
+      className="box"
+      
+      whileHover={{ scale: [null, 1.5, 1.4] }}
+      transition={{ duration: 0.5 }}
+    >  
       <Box
     // marginLeft='1'
      margin='1'
@@ -107,6 +120,7 @@ const LandingSection = () => (
         
         </VStack>
       </Box>
+      </motion.div>
     </VStack>
   </FullScreenSection>
 );
