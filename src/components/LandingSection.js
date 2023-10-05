@@ -32,18 +32,22 @@ const LandingSection = () => (
         <Heading as='h3' size='xl' >{bio1}</Heading>
         <Heading as='h3' size='xl'>{bio2}</Heading>
         <a href={resume} download="Vaibhav Gupta Resume" >
-          <Button shadow='dark-lg'
+        <motion.div
+      
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+   >  <Button shadow='dark-lg'
             // variant='solid'
             colorScheme='whatsapp' size='md'>
             Download Resume
-          </Button>
+          </Button></motion.div>
         </a>
       </VStack>
       <motion.div
       className="box"
       
       whileHover={{ scale: [null, 1.2, 1.1] }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
     >
       <Box
         m='4' p='4'
@@ -88,7 +92,7 @@ const LandingSection = () => (
       <motion.div
       className="box"
       
-      whileHover={{ scale: [null, 1.5, 1.4] }}
+      whileHover={{ scale: [null, 1.5, 1.3] }}
       transition={{ duration: 0.5 }}
     >  
       <Box
