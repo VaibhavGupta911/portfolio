@@ -13,9 +13,6 @@ const Card = ({ title, description, imageSrc, url, git }) => {
   return (
     // <a href="https://vaibhavgupta911.github.io/portfolio-react-proj/"></a>
    
-   
- 
-   
     <VStack
       color='black'/* background='white'*/
       background='#f8f8f8'

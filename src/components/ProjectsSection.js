@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import Card from "./Card";
 
 const projects = [
@@ -13,14 +13,7 @@ const projects = [
     gitlink: 'https://github.com/VaibhavGupta911/little-lemon-resturant',
 
   },
-  {
-    title: "Little Lemon Restaurant Figma Meta Frontend Develpoment Capstone Project ",
-    description:
-      "Step into creative journey of Little Lemon Restaurant! Delve into meticulously crafted wireframes, lifelike prototypes, and comprehensive user requirements Immerse yourself in visual transformation from conceptual sketches to engaging interactive interfaces.",
-    getImageSrc: () => require("../images/figma1.jpg"),
-    url: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
-    gitlink: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
-  },
+
   {
     title: "Portfolio for Meta Frontend Develpoment Course Assignment",
     description:
@@ -28,6 +21,13 @@ const projects = [
     getImageSrc: () => require("../images/photo1.png"),
     url: 'https://vaibhavgupta911.github.io/portfolio-react-proj/',
     gitlink: 'https://github.com/VaibhavGupta911/portfolio-react-proj',
+  }, {
+    title: "Little Lemon Restaurant Figma Meta Frontend Develpoment Capstone Project ",
+    description:
+      "Step into creative journey of Little Lemon Restaurant! Delve into meticulously crafted wireframes, lifelike prototypes, and comprehensive user requirements Immerse yourself in visual transformation from conceptual sketches to engaging interactive interfaces.",
+    getImageSrc: () => require("../images/figma1.jpg"),
+    url: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
+    gitlink: 'https://www.figma.com/file/b6PHQpqb0R9W7UA9eWYx86/Little-Lemon?type=design&node-id=14%3A212&mode=design&t=0SuDJiZFud89MAtt-1',
   },
   {
     title: "Little Lemon UI",
@@ -69,7 +69,7 @@ const projects = [
     url: 'https://vaibhavgupta911.github.io/results_summary_component/',
     gitlink: 'https://github.com/VaibhavGupta911/results_summary_component',
   },
-  
+
   {
     title: "Interactive Rating Component",
     description:
@@ -92,10 +92,11 @@ const ProjectsSection = () => {
   return (
     <FullScreenSection
       backgroundColor="#14532d"
+      
       //backgroundColor='#075E54'
       isDarkBackground
       p={8}
-      alignItems="flex-start"
+      // alignItems="flex-start"
       spacing={8}
     >
       <Heading as="h1" id="projects-section">

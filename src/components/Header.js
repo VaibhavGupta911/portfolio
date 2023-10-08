@@ -5,23 +5,9 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Spacer } from "@chakra-ui/react";
+import { Box, Flex, HStack, Spacer } from "@chakra-ui/react";
 
 
-const socials = [
-  {
-    icon: faEnvelope,
-    url: "mailto: guptaayush519@gmail.com",
-  },
-  {
-    icon: faGithub,
-    url: "https://github.com/VaibhavGupta911",
-  },
-  {
-    icon: faLinkedin,
-    url: "https://www.linkedin.com/in/vaibhav-gupta-raipur/",
-  },
-];
 
 const Header = () => {
   const handleClick = (anchor) => () => {
@@ -57,18 +43,41 @@ const Header = () => {
         backgroundColor="#128C7E"
         margin="0 0">
         <HStack
-          px={10}
-          py={6}
-          justifyContent="space-between"
+      
+          
+          justifyContent='space-between'
           alignItems="center"
           display='flex'
           flexDirection='row'
-          flexWrap='wrap'
+          
 
         //  alignItems='stretch'
-        >
-          <nav>
-            {/* Add social media links based on the `socials` data */}
+        > <a
+        href="#projects"
+        onClick={handleClick("projects")}
+        className="link-hover boldertext"
+      
+        
+      >
+        Projects
+      </a>
+      <a
+        href="#certifications"
+        onClick={handleClick("Certification")}
+        className="link-hover boldertext"
+      >
+        Certification
+      </a>
+      <a
+        href="#skills"
+        onClick={handleClick("skills")}
+        className="link-hover boldertext"
+      >
+        Skills
+      </a>
+
+          {/* <nav>
+            Add social media links based on the `socials` data 
             <HStack spacing={8}
               padding={3}
               display='flex'
@@ -86,35 +95,10 @@ const Header = () => {
                 )
               }
             </HStack>
-          </nav>
-          <Spacer />
-          <nav>
-            <HStack spacing={8} padding={3} >
-              {/* Add links to Project*/}
-              <a
-                href="#projects"
-                onClick={handleClick("projects")}
-                className="link-hover"
-                display='flex' flexDirection='row' flexWrap='wrap'
-              >
-                Projects
-              </a>
-              <a
-                href="#certifications"
-                onClick={handleClick("Certification")}
-                className="link-hover"
-              >
-                Certification
-              </a>
-              <a
-                href="#skills"
-                onClick={handleClick("skills")}
-                className="link-hover"
-              >
-                Skills
-              </a>
-            </HStack>
-          </nav>
+          </nav> */}
+      
+      
+       
         </HStack>
       </Box>
     </Box>

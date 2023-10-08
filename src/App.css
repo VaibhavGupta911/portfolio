@@ -1,11 +1,17 @@
 .link-hover:hover{
-text-decoration: underline;
-text-decoration-color: rgb(71, 70, 70);
+text-decoration:underline 2px;
+text-decoration-color: rgb(8, 8, 8);
 color: rgb(30, 29, 29);
 }
+.link-hover{
+  padding: 1rem;
+}
 
-
-
+.feature{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
 .progress-bar {
     position: fixed;
     top: 0;
@@ -16,3 +22,6 @@ color: rgb(30, 29, 29);
     transform-origin: 0%;
   }
   
+  .boldertext{
+  font-weight:600;
+  }
