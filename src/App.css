@@ -18,10 +18,27 @@ align-items: center;
     left: 0;
     right: 0;
     height: 9px;
-    background: #128C7E;
+    background: black;
+  /* background: #128C7E; */
     transform-origin: 0%;
+    rotate: 90deg;
   }
   
   .boldertext{
   font-weight:600;
+  }
+
+  .lefttext{
+    margin-left: 15%;
+  }
+  .righttext{
+    margin-right: 15%;
+  }
+  @media only screen and (max-width:786px){
+    .lefttext{
+      margin-left: 0;
+    }
+    .righttext{
+      margin-right: 0;
+    }
   }

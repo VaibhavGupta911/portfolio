@@ -1,7 +1,7 @@
 import Photo from '../images/Photo5.jpg'//always import image in top
 import resume from '../images/Resume1.pdf'
 import React from "react";
-import { Avatar, Box, Button, Flex, HStack, Heading, Image, List, ListIcon, ListItem,  VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex,  Heading, Image, List, ListIcon, ListItem,  VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta, FaGithub } from "react-icons/fa6";
 import course from '../images/Coursera.jpg'
@@ -12,7 +12,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 const greeting = "Hi,I'm Vaibhav Gupta!";
 const bio1 = "A Frontend Developer";
 const bio2 = "Specialised in React";
@@ -41,15 +41,21 @@ const LandingSection = () => (
     backgroundColor="#2A4365"
   // backgroundColor='white'
   >
-    <VStack spacing={6} py='6'>
+    <VStack spacing={6} py='6' marginTop='6'>
+      <VStack>
+
       <Avatar src={Photo}
         shadow='dark-lg'
         size='2xl'
         name='Vaibhav Gupta'
         m='4'
       />
+      </VStack>
+     
       <Heading as='h4' size='md'>{greeting}</Heading>
       <VStack spacing={6} >
+        
+     
         <Heading as='h3' size='xl' >{bio1}</Heading>
         <Heading as='h3' size='xl'>{bio2}</Heading>
         <a href={resume} download="Vaibhav_Gupta_Resume" >

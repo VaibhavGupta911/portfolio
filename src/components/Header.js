@@ -1,11 +1,11 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { Box, Flex, HStack, Spacer } from "@chakra-ui/react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import {
+//   faGithub,
+//   faLinkedin,
+// } from "@fortawesome/free-brands-svg-icons";
+import { Box,  HStack } from "@chakra-ui/react";
 
 
 
@@ -22,6 +22,8 @@ const Header = () => {
   };
   return (
     <Box
+    position='fixed'//for having nabbar always above fixed not scroalled
+zIndex='dropdown' //for putting all content scroll below the navbar
       className="box1"
       justifyContent="center"
       alignItems="center"
@@ -36,6 +38,7 @@ const Header = () => {
       //  backgroundColor="#18181b"
       backgroundColor="#128C7E"
       minW='full'
+      
     >
       <Box
         className="box2"
@@ -55,7 +58,7 @@ const Header = () => {
         > <a
         href="#projects"
         onClick={handleClick("projects")}
-        className="link-hover boldertext"
+        className="link-hover boldertext lefttext"
       
         
       >
@@ -71,7 +74,8 @@ const Header = () => {
       <a
         href="#skills"
         onClick={handleClick("skills")}
-        className="link-hover boldertext"
+        className="link-hover boldertext righttext"
+      
       >
         Skills
       </a>
