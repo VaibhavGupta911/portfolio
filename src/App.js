@@ -3,12 +3,12 @@ import Header from "./components/Header";
 import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Footer from "./components/Footer";
-import Bar from "./components/Bar";
+// import Bar from "./components/Bar";
 import './App.css';
 export default function App() {
   return (
     <>
-      <Bar />
+      {/* <Bar /> */}
       <ChakraProvider>
         <main>
           <Header />

@@ -25,3 +25,20 @@ align-items: center;
   .boldertext{
   font-weight:600;
   }
+
+
+
+  .lefttext{
+    margin-left: 15%;
+  }
+  .righttext{
+    margin-right: 15%;
+  }
+  @media only screen and (max-width:786px){
+    .lefttext{
+      margin-left: 0;
+    }
+    .righttext{
+      margin-right: 0;
+    }
+  }

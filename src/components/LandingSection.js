@@ -41,7 +41,7 @@ const LandingSection = () => (
     backgroundColor="#2A4365"
   // backgroundColor='white'
   >
-    <VStack spacing={6} py='6'>
+    <VStack spacing={6} py='6'  marginTop='6'>
       <Avatar src={Photo}
         shadow='dark-lg'
         size='2xl'

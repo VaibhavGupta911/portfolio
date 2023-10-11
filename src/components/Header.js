@@ -22,6 +22,8 @@ const Header = () => {
   };
   return (
     <Box
+    position='fixed'//for having nabbar always above fixed not scroalled
+    zIndex='dropdown' //for putting all content scroll below the navbar
       className="box1"
       justifyContent="center"
       alignItems="center"
@@ -55,7 +57,7 @@ const Header = () => {
         > <a
         href="#projects"
         onClick={handleClick("projects")}
-        className="link-hover boldertext"
+        className="link-hover boldertext lefttext"
       
         
       >
@@ -71,7 +73,7 @@ const Header = () => {
       <a
         href="#skills"
         onClick={handleClick("skills")}
-        className="link-hover boldertext"
+        className="link-hover boldertext righttext"
       >
         Skills
       </a>
