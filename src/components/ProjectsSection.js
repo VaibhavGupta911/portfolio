@@ -5,6 +5,15 @@ import Card from "./Card";
 
 const projects = [
   {
+    title: "Express Travelers",
+    description:
+      "Landing Page of Express Travelers made using Bootstrap JavaScript HTML CSS",
+    getImageSrc: () => require("../images/photo11.jpg"),
+    url: 'https://vaibhavgupta911.github.io/bswebsite/',
+    gitlink: 'https://github.com/VaibhavGupta911/bswebsite',
+
+  },
+  {
     title: "🍋Little Lemon Restaurant Website Meta Frontend Develpoment Capstone Project",
     description:
       "🍋Little Lemon Restaurant: React.js,Formik.Explore a responsive,interactive dining experience. Tech: React.js, CSS, HTML, JS",
