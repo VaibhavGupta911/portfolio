@@ -1,9 +1,9 @@
 import Photo from '../images/Photo5.jpg'//always import image in top
 import resume from '../images/Resume1.pdf'
 import React from "react";
-import { Avatar, Box, Button, Flex, HStack, Heading, Image, List, ListIcon, ListItem,  VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, HStack, Heading, Image, List, ListIcon, ListItem, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
-import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta, FaGithub } from "react-icons/fa6";
+import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta, FaGithub, FaBootstrap } from "react-icons/fa6";
 import course from '../images/Coursera.jpg'
 import { SiChakraui } from "react-icons/si";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -41,7 +41,7 @@ const LandingSection = () => (
     backgroundColor="#2A4365"
   // backgroundColor='white'
   >
-    <VStack spacing={6} py='6'  marginTop='6'>
+    <VStack spacing={6} py='6' marginTop='6'>
       <Avatar src={Photo}
         shadow='dark-lg'
         size='2xl'
@@ -113,25 +113,28 @@ const LandingSection = () => (
               </ListItem>
               <ListItem>
                 <ListIcon><FaJava size="2x" /></ListIcon>
-                JavaScript</ListItem>
+                JavaScript
+              </ListItem>
+              <ListItem>
+                <ListIcon ><FaBootstrap size="2x" /></ListIcon>
+                Bootstrap
+              </ListItem>
               <ListItem>
                 <ListIcon><FaCss3 size="2x" /></ListIcon>
                 Cascading Style Sheets (CSS)
               </ListItem>
-
               <ListItem>
                 <ListIcon><FaHtml5 size="2x" /></ListIcon>
-                HTML</ListItem>
+                HTML
+              </ListItem>
               <ListItem>
                 <ListIcon><FaFigma size="2x" /></ListIcon>
-                Figma Software</ListItem>
+                Figma Software
+              </ListItem>
               <ListItem>
                 <ListIcon><FaGithub size="2x" /></ListIcon>
-                GitHub</ListItem>
-              <ListItem>
-                <ListIcon ><SiChakraui size="2x" /></ListIcon>
-                Chakra-UI</ListItem>
-
+                GitHub
+              </ListItem>
             </List>
 
           </VStack>
