@@ -5,6 +5,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import Footer from "./components/Footer";
 // import Bar from "./components/Bar";
 import './App.css';
+
 export default function App() {
   return (
     <>
@@ -12,9 +13,11 @@ export default function App() {
       <ChakraProvider>
         <main>
           <Header />
-          <LandingSection />
-          <ProjectsSection />
-          <Footer />
+       
+            <LandingSection />
+            <ProjectsSection />
+            <Footer />
+       
         </main>
       </ChakraProvider>
     </>

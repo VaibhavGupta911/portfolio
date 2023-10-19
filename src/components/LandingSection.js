@@ -46,7 +46,8 @@ const LandingSection = () => (
         shadow='dark-lg'
         size='2xl'
         name='Vaibhav Gupta'
-        m='4'
+        mt='16'
+        mb='9'
       />
       <Heading as='h4' size='md'>{greeting}</Heading>
       <VStack spacing={6} >
@@ -73,7 +74,8 @@ const LandingSection = () => (
       whileHover={{ scale: [null, 1.2, 1.1] }}
       transition={{ duration: 0.5 }}
     > */}
-      <Flex justifyContent='space-evenly' alignItems='center'  >
+      <Flex justifyContent='space-evenly' alignItems='center' 
+      >
         {
           socials.map((e) =>
             <a href={e.url} key={e.url} className="link-hover ">
@@ -91,6 +93,7 @@ const LandingSection = () => (
         alignItems="center"
         flexWrap='wrap'
         justify='space-between'
+      
       >
 
         <Box
