@@ -99,7 +99,32 @@ const LandingSection = () => (
         flexWrap='wrap'
         justify='space-between'
       >
+  <Box
+          // marginLeft='1'
 
+          //backgroundColor="#14532d"
+          backgroundColor='#075E54'
+          borderRadius='2xl'
+          shadow='dark-lg'
+          className='Experience-section'
+          id='Experience-section'
+       //   m='4'
+
+        >
+          <VStack p='2' m='2' >
+            <Heading as="h3" size='md' >
+              Experience
+            </Heading>
+
+            <List fontSize='md'   >
+              <ListItem>Quality Associate LMAQ Nov,2023-Present</ListItem>
+            </List>
+            {/*<Box boxSize='sm' alignContent='center' alignItems='center'>   </Box> */}
+
+            <Image src={amazon} alt='meta front end deveplomnet course ' borderRadius='2xl' height='200px' />
+            
+          </VStack>
+        </Box>
         <Box
           m='4' p='4'
           //backgroundColor="#14532d"
@@ -183,32 +208,7 @@ const LandingSection = () => (
             </a>
           </VStack>
         </Box>
-        <Box
-          // marginLeft='1'
-
-          //backgroundColor="#14532d"
-          backgroundColor='#075E54'
-          borderRadius='2xl'
-          shadow='dark-lg'
-          className='Experience-section'
-          id='Experience-section'
-          m='4'
-
-        >
-          <VStack p='2' m='2' >
-            <Heading as="h3" size='md' >
-              Experience
-            </Heading>
-
-            <List fontSize='md'   >
-              <ListItem>Quality Associate LMAQ Nov,2023-Present</ListItem>
-            </List>
-            {/*<Box boxSize='sm' alignContent='center' alignItems='center'>   </Box> */}
-
-            <Image src={amazon} alt='meta front end deveplomnet course ' borderRadius='2xl' height='200px' />
-            
-          </VStack>
-        </Box>
+      
 
       </Flex>
       {/* </motion.div> */}
