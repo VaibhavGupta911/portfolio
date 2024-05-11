@@ -32,8 +32,8 @@ const Card = ({ title, description, imageSrc, url, git }) => {
         <Text color='#64748b' fontSize='small' textAlign='left' /*textAlign='justify'*/>
           {description}
         </Text>
-        <HStack >{/*horizontal means new line here */}
-          <a href={git} cursor='pointer' isExternal>
+        <HStack  >{/*horizontal means new line here */}
+          <a href={git} cursor='pointer' isExternal >
             <Text fontSize='lg'>
               <FontAwesomeIcon
                 icon={faGithub}
