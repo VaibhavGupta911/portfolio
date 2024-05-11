@@ -79,6 +79,14 @@ zIndex='dropdown' //for putting all content scroll below the navbar
       >
         Skills
       </a>
+      <a
+        href="#Experience"
+        onClick={handleClick("Experience")}
+        className="link-hover boldertext righttext"
+      
+      >
+        Experience
+      </a>
 
           {/* <nav>
             Add social media links based on the `socials` data 

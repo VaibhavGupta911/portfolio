@@ -1,10 +1,11 @@
 import Photo from '../images/Photo5.jpg'//always import image in top
 import resume from '../images/Resume1.pdf'
 import React from "react";
-import { Avatar, Box, Button, Flex,  Heading, Image, List, ListIcon, ListItem,  VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex,  Heading, Image, List, ListIcon, ListItem, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta, FaGithub } from "react-icons/fa6";
 import course from '../images/Coursera.jpg'
+import amazon from '../images/Amazon logo.png'
 import { SiChakraui } from "react-icons/si";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -44,18 +45,18 @@ const LandingSection = () => (
     <VStack spacing={6} py='6' marginTop='6'>
       <VStack>
 
-      <Avatar src={Photo}
-        shadow='dark-lg'
-        size='2xl'
-        name='Vaibhav Gupta'
-        m='4'
-      />
+        <Avatar src={Photo}
+          shadow='dark-lg'
+          size='2xl'
+          name='Vaibhav Gupta'
+          m='4'
+        />
       </VStack>
-     
+
       <Heading as='h4' size='md'>{greeting}</Heading>
       <VStack spacing={6} >
-        
-     
+
+
         <Heading as='h3' size='xl' >{bio1}</Heading>
         <Heading as='h3' size='xl'>{bio2}</Heading>
         <a href={resume} download="Vaibhav_Gupta_Resume" >
@@ -91,7 +92,6 @@ const LandingSection = () => (
           )
         }
       </Flex>
-
 
       <Flex justifyContent="center"
         alignItems="center"
@@ -182,6 +182,33 @@ const LandingSection = () => (
             </a>
           </VStack>
         </Box>
+        <Box
+          // marginLeft='1'
+
+          //backgroundColor="#14532d"
+          backgroundColor='#075E54'
+          borderRadius='2xl'
+          shadow='dark-lg'
+          className='Experience-section'
+          id='Experience-section'
+          m='4'
+
+        >
+          <VStack p='2' m='2' >
+            <Heading as="h3" size='md' >
+              Experience
+            </Heading>
+
+            <List fontSize='md'   >
+              <ListItem>Quality Associate LMAQ Nov,2023-Present</ListItem>
+            </List>
+            {/*<Box boxSize='sm' alignContent='center' alignItems='center'>   </Box> */}
+
+            <Image src={amazon} alt='meta front end deveplomnet course ' borderRadius='2xl' height='200px' />
+            
+          </VStack>
+        </Box>
+
       </Flex>
       {/* </motion.div> */}
     </VStack>
