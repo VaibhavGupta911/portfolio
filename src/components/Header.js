@@ -52,7 +52,7 @@ zIndex='dropdown' //for putting all content scroll below the navbar
           alignItems="center"
           display='flex'
           flexDirection='row'
-          
+          flexWrap='wrap'
 
         //  alignItems='stretch'
         > <a

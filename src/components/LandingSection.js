@@ -15,7 +15,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 //import { motion } from "framer-motion";
-const greeting = "Hi,I'm Vaibhav Gupta!";
+const greeting = "Hi,I'm Vaibhav Gupta";
 const bio1 = "A Frontend Developer";
 const bio2 = "Specialised in React";
 const socials = [
@@ -41,16 +41,18 @@ const LandingSection = () => (
     alignItems="center"
     isDarkBackground
     backgroundColor="#2A4365"
+  
   // backgroundColor='white'
   >
-    <VStack spacing={6} py='6' marginTop='6'>
+    <VStack spacing={6} py='6' marginTop='16'>
       <VStack>
 
-        <Avatar src={Photo}
+        <Avatar  src={Photo}
           shadow='dark-lg'
-          size='2xl'
+          size='2xxl'
           name='Vaibhav Gupta'
-          m='4'
+          marginBottom='1'
+          marginTop='10'
         />
       </VStack>
 
@@ -58,8 +60,8 @@ const LandingSection = () => (
       <VStack spacing={6} >
 
 
-        <Heading as='h3' size='xl' >{bio1}</Heading>
-        <Heading as='h3' size='xl'>{bio2}</Heading>
+        <Heading as='h3' size='lg' >{bio1}</Heading>
+        <Heading as='h3' size='lg'>{bio2}</Heading>
         <a href={resume} download="Vaibhav_Gupta_Resume" >
           {/* <motion.div
       
@@ -108,10 +110,10 @@ const LandingSection = () => (
           shadow='dark-lg'
           className='Experience-section'
           id='Experience-section'
-       //   m='4'
+         m='4' p='1'
 
         >
-          <VStack p='2' m='2' >
+          <VStack p='2' m='1' >
             <Heading as="h3" size='md' >
               Experience
             </Heading>
@@ -133,7 +135,9 @@ const LandingSection = () => (
           shadow='dark-lg'
           id="skills-section"
         >
-          <VStack p='1' m='1' marginRight='6' marginLeft='6'>
+          <VStack p='1' m='1' 
+         marginRight='6' marginLeft='6'
+          >
             <Heading as="h3" size='md' >
               Skills
             </Heading>
