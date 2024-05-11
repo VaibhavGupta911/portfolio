@@ -1,4 +1,5 @@
-import Photo from '../images/Photo5.jpg'//always import image in top
+//import Photo from '../images/Photo5.jpg'//always import image in top
+import Photo from '../images/pic2.jpg' 
 import resume from '../images/Resume1.pdf'
 import React from "react";
 import { Avatar, Box, Button, Flex,  Heading, Image, List, ListIcon, ListItem, VStack } from "@chakra-ui/react";
