@@ -95,7 +95,7 @@ const LandingSection = () => (
           )
         }
       </Flex>
-
+      
       <Flex justifyContent="center"
         alignItems="center"
         flexWrap='wrap'
@@ -103,7 +103,6 @@ const LandingSection = () => (
       >
   <Box
           // marginLeft='1'
-
           //backgroundColor="#14532d"
           backgroundColor='#075E54'
           borderRadius='2xl'
@@ -111,7 +110,6 @@ const LandingSection = () => (
           className='Experience-section'
           id='Experience-section'
          m='4' p='1'
-
         >
           <VStack p='2' m='1' >
             <Heading as="h3" size='md' >
