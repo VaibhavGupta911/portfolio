@@ -1,54 +1,53 @@
-import { Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Image, Text, VStack, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import {
-  faGithub
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import PropTypes from 'prop-types';
+
 const Card = ({ title, description, imageSrc, url, git }) => {
-  // Implement the UI for the Card component according to the instructions.
-  // You should be able to implement the component with the elements imported above.
-  // Feel free to import other UI components from Chakra UI if you wish to.
   return (
-    // <a href="https://vaibhavgupta911.github.io/portfolio-react-proj/"></a>
-   
     <VStack
-      color='black'/* background='white'*/
+      color='black'
       background='#f8f8f8'
       borderRadius='xl'
+      boxShadow='md'
+      _hover={{ boxShadow: 'lg', transform: 'scale(1.02)' }} // Hover effect
+      transition='0.3s'
     >
-      <a href={url} cursor='pointer' >
-        <Image src={imageSrc} 
-        borderTopRadius='xl'
-        />
-      </a>
+      <Link href={url} isExternal cursor='pointer'>
+        <Image src={imageSrc} alt={title} borderTopRadius='xl' />
+      </Link>
       <VStack spacing={4} p={3} alignItems='flex-start'>
-        <HStack> {/*horizontal means new line here */}
-          <Heading as='h3' size='sm' fontWeight='semibold' textAlign='left' >
+        <HStack>
+          <Heading as='h3' size='sm' fontWeight='semibold' textAlign='left'>
             {title}
           </Heading>
         </HStack>
-        <Text color='#64748b' fontSize='small' textAlign='left' /*textAlign='justify'*/>
+        <Text color='#64748b' fontSize='small' textAlign='left'>
           {description}
         </Text>
-        <HStack  >{/*horizontal means new line here */}
-          <a href={git} cursor='pointer' isExternal >
-            <Text fontSize='lg'>
-              <FontAwesomeIcon
-                icon={faGithub}
-                size='1x'
-              /> See more 
-              {/* <FontAwesomeIcon icon={faArrowRight} size="1x" />
-               */}
-             <ExternalLinkIcon mx='2px' />
-
-              </Text>
-          </a>
+        <HStack>
+          <Link href={git} isExternal>
+            <Text fontSize='lg' display='flex' alignItems='center'>
+              <FontAwesomeIcon icon={faGithub} size='1x' />
+              <span> See more </span>
+              <ExternalLinkIcon mx='2px' />
+            </Text>
+          </Link>
         </HStack>
       </VStack>
-    </VStack>   
+    </VStack>
   );
+};
+
+// Prop Types for validation
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  git: PropTypes.string.isRequired,
 };
 
 export default Card;

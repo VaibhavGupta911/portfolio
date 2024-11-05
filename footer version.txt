@@ -1,8 +1,177 @@
+import React from "react";
+import { Box, Flex, Text } from "@chakra-ui/react";
+const Footer = () => {
+  return (
+    <Box
+      //backgroundColor="#18181b"
+      backgroundColor="#128C7E"
+    >
+      <footer>
+        <Flex
+          margin="0 auto"
+          px={12}
+          color="white"
+          justifyContent="center"
+          alignItems="center"
+          maxWidth="1024px"
+          height={16}
+        >
+          <Text>Vaibhav Gupta • 2023 • Made using React Chakara UI</Text>
+        </Flex>
+      </footer>
+    </Box>
+  );
+};
+export default Footer;
+
+
+import * as React from "react";
+import { VStack } from "@chakra-ui/react";
+
+/**
+ * Illustrates the use of children prop and spread operator
+ */
+const FullScreenSection = ({ children, isDarkBackground, ...boxProps }) => {
+  return (
+    <VStack
+      backgroundColor={boxProps.backgroundColor}
+      color={isDarkBackground ? "white" : "black"}
+    >
+      <VStack maxWidth="1280px" minHeight="100vh" {...boxProps}>
+        {children}
+      </VStack>
+    </VStack>
+  );
+};
+
+export default FullScreenSection;
+
+
+import React from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import {
+//   faGithub,
+//   faLinkedin,
+// } from "@fortawesome/free-brands-svg-icons";
+import { Box,  HStack } from "@chakra-ui/react";
+
+
+
+const Header = () => {
+  const handleClick = (anchor) => () => {
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+  return (
+    <Box
+    position='fixed'//for having nabbar always above fixed not scroalled
+zIndex='dropdown' //for putting all content scroll below the navbar
+      className="box1"
+      justifyContent="center"
+      alignItems="center"
+      // position='fixed'
+      top={0}
+      left={0}
+      right={0}
+      translateY={0}
+      transitionProperty="transform"
+      transitionDuration=".3s"
+      transitionTimingFunction="ease-in-out"
+      //  backgroundColor="#18181b"
+      backgroundColor="#128C7E"
+      minW='full'
+      
+    >
+      <Box
+        className="box2"
+        color="white" width
+        backgroundColor="#128C7E"
+        margin="0 0">
+        <HStack
+      
+          
+          justifyContent='space-between'
+          alignItems="center"
+          display='flex'
+          flexDirection='row'
+          flexWrap='wrap'
+
+        //  alignItems='stretch'
+        > <a
+        href="#projects"
+        onClick={handleClick("projects")}
+        className="link-hover boldertext lefttext"
+      
+        
+      >
+        Projects
+      </a>
+      <a
+        href="#certifications"
+        onClick={handleClick("Certification")}
+        className="link-hover boldertext"
+      >
+        Certification
+      </a>
+      <a
+        href="#skills"
+        onClick={handleClick("skills")}
+        className="link-hover boldertext righttext"
+      
+      >
+        Skills
+      </a>
+      <a
+        href="#Experience"
+        onClick={handleClick("Experience")}
+        className="link-hover boldertext righttext"
+      
+      >
+        Experience
+      </a>
+
+          {/* <nav>
+            Add social media links based on the `socials` data 
+            <HStack spacing={8}
+              padding={3}
+              display='flex'
+              flexDirection='row'
+              justify='space-between'
+            >
+              {
+                socials.map((e) =>
+                  <a href={e.url} key={e.url} className="link-hover">
+                    <FontAwesomeIcon
+                      icon={e.icon}
+                      size="2x"
+                    />
+                  </a>
+                )
+              }
+            </HStack>
+          </nav> */}
+      
+      
+       
+        </HStack>
+      </Box>
+    </Box>
+  );
+};
+export default Header;
+---------------------------------------------------------------------------------------------------
 //import Photo from '../images/Photo5.jpg'//always import image in top
-import Photo from '../images/pic2.jpg'
+import Photo from '../images/pic2.jpg' 
 import resume from '../images/Resume1.pdf'
 import React from "react";
-import { Avatar, Box, Button, Flex, Heading, Image, List, ListIcon, ListItem, VStack } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex,  Heading, Image, List, ListIcon, ListItem, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import { FaCss3, FaFigma, FaHtml5, FaJava, FaReact, FaMeta, FaGithub } from "react-icons/fa6";
 import course from '../images/Coursera.jpg'
@@ -41,13 +210,13 @@ const LandingSection = () => (
     alignItems="center"
     isDarkBackground
     backgroundColor="#2A4365"
-
+  
   // backgroundColor='white'
   >
     <VStack spacing={6} py='6' marginTop='16'>
       <VStack>
 
-        <Avatar src={Photo}
+        <Avatar  src={Photo}
           shadow='dark-lg'
           size='2xxl'
           name='Vaibhav Gupta'
@@ -95,13 +264,13 @@ const LandingSection = () => (
           )
         }
       </Flex>
-
+      
       <Flex justifyContent="center"
         alignItems="center"
         flexWrap='wrap'
         justify='space-between'
       >
-        <Box
+  <Box
           // marginLeft='1'
           //backgroundColor="#14532d"
           backgroundColor='#075E54'
@@ -109,7 +278,7 @@ const LandingSection = () => (
           shadow='dark-lg'
           className='Experience-section'
           id='Experience-section'
-          m='4' p='1'
+         m='4' p='1'
         >
           <VStack p='2' m='1' >
             <Heading as="h3" size='md' >
@@ -122,7 +291,7 @@ const LandingSection = () => (
             {/*<Box boxSize='sm' alignContent='center' alignItems='center'>   </Box> */}
 
             <Image src={amazon} alt='meta front end deveplomnet course ' borderRadius='2xl' height='200px' />
-
+            
           </VStack>
         </Box>
         <Box
@@ -133,8 +302,8 @@ const LandingSection = () => (
           shadow='dark-lg'
           id="skills-section"
         >
-          <VStack p='1' m='1'
-            marginRight='6' marginLeft='6'
+          <VStack p='1' m='1' 
+         marginRight='6' marginLeft='6'
           >
             <Heading as="h3" size='md' >
               Skills
@@ -167,7 +336,9 @@ const LandingSection = () => (
                 Chakra-UI</ListItem>
 
             </List>
+
           </VStack>
+
         </Box>
         {/* </motion.div> */}
         {/* <motion.div
@@ -208,7 +379,7 @@ const LandingSection = () => (
             </a>
           </VStack>
         </Box>
-
+      
 
       </Flex>
       {/* </motion.div> */}
@@ -216,3 +387,5 @@ const LandingSection = () => (
   </FullScreenSection>
 );
 export default LandingSection;
+
+
