@@ -1,16 +1,34 @@
-
-import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-// import {
-//   faGithub,
-//   faLinkedin,
-// } from "@fortawesome/free-brands-svg-icons";
-import { Box,  HStack } from "@chakra-ui/react";
-
-
+import React, { useState, useEffect, useRef } from "react";
+import { Box, HStack, IconButton, Collapse, VStack, Text } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import FastSlideshow from "./FastSlideshow"; 
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Close the menu if clicking outside the header
+    const handleClickOutside = (event) => {
+      if (headerRef.current && !headerRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
@@ -19,102 +37,103 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
+      setIsOpen(false); // Close the menu after clicking
     }
   };
+
   return (
     <Box
-    position='fixed'//for having nabbar always above fixed not scroalled
-zIndex='dropdown' //for putting all content scroll below the navbar
-      className="box1"
-      justifyContent="center"
-      alignItems="center"
-      // position='fixed'
+      ref={headerRef}
+      position="fixed"
+      zIndex="dropdown"
       top={0}
       left={0}
       right={0}
-      translateY={0}
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
-      //  backgroundColor="#18181b"
-      backgroundColor="#128C7E"
-      minW='full'
-      
+      backgroundColor="#075E54"
+      padding="0.5rem 1rem"
+      boxShadow={scrollY > 0 ? "md" : "none"}
+      transition="box-shadow 0.3s ease-in-out"
     >
-      <Box
-        className="box2"
-        color="white" width
-        backgroundColor="#128C7E"
-        margin="0 0">
+      <HStack
+        justifyContent="space-between"
+        alignItems="center"
+        maxW="1200px"
+        mx="auto"
+      >
+        {/* Logo / Brand Name - scrolls to top */}
+      <Text
+          fontSize="xl"
+          fontWeight="bold"
+          color="white"
+          cursor="pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          My Portfolio
+        </Text>
+
+
+        {/* Toggle Button for Mobile */}
+        <IconButton
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Navigation"
+          colorScheme="teal"
+          variant="ghost"
+          size="lg"
+          display={{ md: "none" }}
+        />
+
+        {/* Collapsible Menu for Mobile */}
+        <Collapse in={isOpen} animateOpacity>
+          <VStack
+            spacing={4}
+            alignItems="flex-start"
+            display={{ base: "flex", md: "none" }}
+            backgroundColor="#075E54"
+            width="100%"
+            padding={4}
+            borderRadius="md"
+          >
+            {["projects", "certifications", "skills", "experience"].map((item) => (
+              <Text
+                key={item}
+                onClick={handleClick(item)}
+                fontWeight="bold"
+                fontSize="lg"
+                color="white"
+                _hover={{ color: "gray.200", cursor: "pointer" }}
+                width="100%"
+                textAlign="left"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </Text>
+            ))}
+          </VStack>
+        </Collapse>
+
+        {/* Menu for Desktop */}
         <HStack
-      
-          
-          justifyContent='space-between'
-          alignItems="center"
-          display='flex'
-          flexDirection='row'
-          flexWrap='wrap'
-
-        //  alignItems='stretch'
-        > <a
-        href="#projects"
-        onClick={handleClick("projects")}
-        className="link-hover boldertext lefttext"
-      
-        
-      >
-        Projects
-      </a>
-      <a
-        href="#certifications"
-        onClick={handleClick("Certification")}
-        className="link-hover boldertext"
-      >
-        Certification
-      </a>
-      <a
-        href="#skills"
-        onClick={handleClick("skills")}
-        className="link-hover boldertext righttext"
-      
-      >
-        Skills
-      </a>
-      <a
-        href="#Experience"
-        onClick={handleClick("Experience")}
-        className="link-hover boldertext righttext"
-      
-      >
-        Experience
-      </a>
-
-          {/* <nav>
-            Add social media links based on the `socials` data 
-            <HStack spacing={8}
-              padding={3}
-              display='flex'
-              flexDirection='row'
-              justify='space-between'
+          spacing={8}
+          display={{ base: "none", md: "flex" }}
+        >
+          {["projects", "certifications", "skills", "experience"].map((item) => (
+            <Text
+              key={item}
+              onClick={handleClick(item)}
+              fontWeight="bold"
+              fontSize="lg"
+              color="white"
+              _hover={{ color: "gray.200", cursor: "pointer", borderBottom: "2px solid white" }}
+              transition="color 0.2s ease-in-out, border-bottom 0.2s ease-in-out"
             >
-              {
-                socials.map((e) =>
-                  <a href={e.url} key={e.url} className="link-hover">
-                    <FontAwesomeIcon
-                      icon={e.icon}
-                      size="2x"
-                    />
-                  </a>
-                )
-              }
-            </HStack>
-          </nav> */}
-      
-      
-       
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </Text>
+          ))}
         </HStack>
-      </Box>
+      </HStack>
+
     </Box>
   );
 };
+
 export default Header;
