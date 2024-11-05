@@ -108,7 +108,7 @@ const LandingSection = () => (
           borderRadius='2xl'
           shadow='dark-lg'
           className='Experience-section'
-          id='Experience-section'
+          id='experience-section'
           m='4' p='1'
         >
           <VStack p='2' m='1' >
@@ -184,7 +184,7 @@ const LandingSection = () => (
           borderRadius='2xl'
           shadow='dark-lg'
           className='Certification-section'
-          id='Certification-section'
+          id='certifications-section'
 
         // m='4' p='4'
 

@@ -1,33 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, HStack, IconButton, Collapse, VStack, Text } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import FastSlideshow from "./FastSlideshow"; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    // Close the menu if clicking outside the header
-    const handleClickOutside = (event) => {
-      if (headerRef.current && !headerRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [isOpen]);
 
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
@@ -37,13 +20,13 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
-      setIsOpen(false); // Close the menu after clicking
+    } else {
+      console.error(`Element with id "${id}" not found.`);
     }
   };
 
   return (
     <Box
-      ref={headerRef}
       position="fixed"
       zIndex="dropdown"
       top={0}
@@ -60,8 +43,7 @@ const Header = () => {
         maxW="1200px"
         mx="auto"
       >
-        {/* Logo / Brand Name - scrolls to top */}
-      <Text
+        <Text
           fontSize="xl"
           fontWeight="bold"
           color="white"
@@ -71,8 +53,6 @@ const Header = () => {
           My Portfolio
         </Text>
 
-
-        {/* Toggle Button for Mobile */}
         <IconButton
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           onClick={() => setIsOpen(!isOpen)}
@@ -83,7 +63,6 @@ const Header = () => {
           display={{ md: "none" }}
         />
 
-        {/* Collapsible Menu for Mobile */}
         <Collapse in={isOpen} animateOpacity>
           <VStack
             spacing={4}
@@ -111,7 +90,6 @@ const Header = () => {
           </VStack>
         </Collapse>
 
-        {/* Menu for Desktop */}
         <HStack
           spacing={8}
           display={{ base: "none", md: "flex" }}
@@ -131,7 +109,6 @@ const Header = () => {
           ))}
         </HStack>
       </HStack>
-
     </Box>
   );
 };
