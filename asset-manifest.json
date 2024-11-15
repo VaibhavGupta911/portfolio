@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.77b339ce.css",
-    "main.js": "/portfolio/static/js/main.61da2d72.js",
+    "main.css": "/portfolio/static/css/main.8747e56b.css",
+    "main.js": "/portfolio/static/js/main.b971ce64.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/Coursera.jpg": "/portfolio/static/media/Coursera.616eaf2950bff374e1fc.jpg",
     "static/media/photo11.jpg": "/portfolio/static/media/photo11.45d722152d50adc94d6a.jpg",
@@ -19,12 +19,12 @@
     "static/media/Amazon logo.png": "/portfolio/static/media/Amazon logo.d82c01816b81b7dffb81.png",
     "static/media/pic2.jpg": "/portfolio/static/media/pic2.86036078acd6ac5b87ed.jpg",
     "index.html": "/portfolio/index.html",
-    "main.77b339ce.css.map": "/portfolio/static/css/main.77b339ce.css.map",
-    "main.61da2d72.js.map": "/portfolio/static/js/main.61da2d72.js.map",
+    "main.8747e56b.css.map": "/portfolio/static/css/main.8747e56b.css.map",
+    "main.b971ce64.js.map": "/portfolio/static/js/main.b971ce64.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77b339ce.css",
-    "static/js/main.61da2d72.js"
+    "static/css/main.8747e56b.css",
+    "static/js/main.b971ce64.js"
   ]
 }
