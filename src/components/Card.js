@@ -1,18 +1,24 @@
+import React, { useRef } from "react";
 import { Heading, HStack, Image, Text, VStack, Link } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import PropTypes from 'prop-types';
-
+import useOnScreen from './useOnScreen'; // Import your custom hook
+import '../App.css';
 const Card = ({ title, description, imageSrc, url, git }) => {
+  const ref = useRef();
+  const isVisible = useOnScreen(ref);
+
   return (
     <VStack
+      ref={ref}
+      className={isVisible ? 'card-animated' : ''}
       color='black'
       background='#f8f8f8'
       borderRadius='xl'
       boxShadow='md'
-      _hover={{ boxShadow: 'lg', transform: 'scale(1.02)' }} // Hover effect
+      _hover={{ boxShadow: 'lg', transform: 'scale(1.02)' }}
       transition='0.3s'
     >
       <Link href={url} isExternal cursor='pointer'>
